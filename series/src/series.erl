@@ -2,14 +2,14 @@
 
 -export([slices/2]).
 
-slices(_SliceLength, _Series = [_|_]) when _SliceLength =< length(_Series), _SliceLength > 0 ->
-  lists:reverse(slices(_SliceLength, _Series, [])).
+slices(SliceLength, Series = [_|_]) when SliceLength =< length(Series), SliceLength > 0 ->
+  lists:reverse(slices(SliceLength, Series, [])).
 
-slices(_, [],_Acc) -> _Acc;
-slices(_SliceLength, _Series = [_|T],_Acc) ->
-  case takeN(_SliceLength, _Series) of
-    Slice when length(Slice) == _SliceLength -> slices(_SliceLength, T, [Slice|_Acc]);
-                                           _ -> _Acc
+slices(_, [],Acc) -> Acc;
+slices(SliceLength, Series = [_|T], Acc) ->
+  case takeN(SliceLength, Series) of
+    Slice when length(Slice) == SliceLength -> slices(SliceLength, T, [Slice|Acc]);
+                                          _ -> Acc
   end.
 
 takeN(N, List) -> lists:reverse(takeN(N, List, [])).

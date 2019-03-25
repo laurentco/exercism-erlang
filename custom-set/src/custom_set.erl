@@ -4,35 +4,35 @@
 	 union/2]).
 
 
-add(_Elem, _Set) ->
-	case contains(_Elem, _Set) of
-		true  -> _Set;
-	  false -> [_Elem | _Set]
+add(Elem, Set) ->
+	case contains(Elem, Set) of
+		true  -> Set;
+	  false -> [Elem | Set]
   end.
 
-contains(_Elem, _Set) ->
-	lists:any(fun(_Item) -> _Item == _Elem end, _Set).
+contains(Elem, Set) ->
+	lists:any(fun(Item) -> Item == Elem end, Set).
 
-disjoint(_Set1, _Set2) ->
-	intersection(_Set1, _Set2) == [].
+disjoint(Set1, Set2) ->
+	intersection(Set1, Set2) == [].
 
-difference(_Set1, _Set2) ->
-	lists:filter(fun(_Item) -> not contains(_Item, _Set2) end, _Set1).
+difference(Set1, Set2) ->
+	lists:filter(fun(Item) -> not contains(Item, Set2) end, Set1).
 
 empty([]) -> true;
 empty(_)  -> false.
 
-equal(_Set1, _Set2) ->
-	subset(_Set1, _Set2) and subset(_Set2, _Set1).
+equal(Set1, Set2) ->
+	subset(Set1, Set2) and subset(Set2, Set1).
 
-from_list(_List) when is_list(_List) ->
-	lists:foldl(fun add/2, [], _List).
+from_list(List) when is_list(List) ->
+	lists:foldl(fun add/2, [], List).
 
-intersection(_Set1, _Set2) ->
-	lists:filter(fun(_Item) -> contains(_Item, _Set2) end, _Set1).
+intersection(Set1, Set2) ->
+	lists:filter(fun(Item) -> contains(Item, Set2) end, Set1).
 
-subset(_Set1, _Set2) ->
-	lists:all(fun(_Item) -> contains(_Item, _Set2) end, _Set1).
+subset(Set1, Set2) ->
+	lists:all(fun(Item) -> contains(Item, Set2) end, Set1).
 
-union(_Set1, _Set2) ->
-	lists:foldl(fun add/2, _Set1, _Set2).
+union(Set1, Set2) ->
+	lists:foldl(fun add/2, Set1, Set2).

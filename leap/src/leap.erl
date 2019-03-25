@@ -2,9 +2,7 @@
 
 -export([leap_year/1]).
 
-leap_year(_Year) when is_integer(_Year) ->
-  if _Year rem 400 == 0 -> true;
-     _Year rem 100 == 0 -> false;
-     _Year rem 4   == 0 -> true;
-     true               -> false
-  end.
+leap_year(Year) when Year rem 400 == 0 -> true;
+leap_year(Year) when Year rem 100 == 0 -> false;
+leap_year(Year) when Year rem 4   == 0 -> true;
+leap_year(_)                           -> false.

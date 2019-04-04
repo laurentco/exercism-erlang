@@ -3,17 +3,7 @@
 -export([convert/1]).
 
 convert(Number) ->
-  case convert(Number, [{7, "Plong"}, {5,"Plang"}, {3,"Pling"}]) of
+  case [ Output || {Factor, Output} <- [{3,"Pling"}, {5,"Plang"}, {7, "Plong"}], Number rem Factor =:= 0] of
     []  -> integer_to_list(Number);
     Str -> lists:flatten(Str)
   end.
-
-convert(Number, Factors) ->
-  lists:foldl(
-    fun
-     ({Factor,Output},Str) when Number rem Factor =:= 0 -> [Output|Str];
-     (_,Str) -> Str
-    end,
-    [],
-    Factors
-  ).

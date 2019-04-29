@@ -11,19 +11,28 @@ response(String) ->
     _                   -> "Whatever."
   end.
 
+% returns {Tone,Type} of a String utterance
+% Tone = yelling | neutral
+% Type = nothing | question | statement
 analyse(String) ->
-  WhiteSpaces = re:run(String, "^\\s*$"),
-  Question    = re:run(String, "\\?\\s*$"),
-  UpperCase   = re:run(String, "[A-Z]"),
-  LowerCase   = re:run(String, "[a-z]"),
-  What = if
-           WhiteSpaces =/= nomatch -> nothing;
-           Question    =/= nomatch -> question;
-           true                    -> statement
-   end,
-  Tone = if
-           (UpperCase =/= nomatch) and (LowerCase =:= nomatch) -> yelling;
-           true                                                -> neutral
-   end,
-  {Tone, What}.
+  IsNothing  = re:run(String, "^\\s*$") =/= nomatch,
+  IsQuestion = re:run(String, "\\?\\s*$") =/= nomatch,
 
+  Type = if
+           IsNothing  -> nothing;
+           IsQuestion -> question;
+           true       -> statement
+   end,
+
+  Tone = case is_yelling(String) of
+           true -> yelling;
+           _    -> neutral
+         end,
+
+  {Tone, Type}.
+
+is_yelling(String) -> some_uppercase(String) andalso no_lowercase(String).
+
+some_uppercase(String) -> re:run(String, "[A-Z]") =/= nomatch.
+
+no_lowercase(String) -> re:run(String, "[a-z]") =:= nomatch.

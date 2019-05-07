@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbc0dc92-9db4-4688-8978-cc1be09b7728" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../hamming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hamming/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fbc0dc92-9db4-4688-8978-cc1be09b7728" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.rebar3/" />
     <ignored path="$PROJECT_DIR$/_build/" />
@@ -23,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/run_length_encoding.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+            <state relative-caret-position="176">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -58,8 +56,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1627" />
-    <option name="y" value="-959" />
+    <option name="x" value="-1885" />
+    <option name="y" value="-875" />
     <option name="width" value="1627" />
     <option name="height" value="1526" />
   </component>
@@ -90,6 +88,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/rebar.config" />
@@ -130,15 +129,15 @@
       <option name="presentableId" value="Default" />
       <updated>1557120625669</updated>
       <workItem from="1557120626900" duration="5851000" />
-      <workItem from="1557143205390" duration="2029000" />
+      <workItem from="1557143205390" duration="3076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7880000" />
+    <option name="totallyTimeSpent" value="8927000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1627" y="-959" width="1627" height="1526" extended-state="0" />
+    <frame x="-1885" y="-875" width="1627" height="1526" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29526815" />
@@ -201,8 +200,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/run_length_encoding.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        <state relative-caret-position="176">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

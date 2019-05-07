@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/_build/default/lib/erl_exercism/erl_exercism.iml" filepath="$PROJECT_DIR$/_build/default/lib/erl_exercism/erl_exercism.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_build/default/lib/parse_trans/parse_trans.iml" filepath="$PROJECT_DIR$/_build/default/lib/parse_trans/parse_trans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/space_age.iml" filepath="$PROJECT_DIR$/space_age.iml" />
+    </modules>
+  </component>
+</project>
